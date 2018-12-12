@@ -9,10 +9,10 @@ An Instagram-like application where users can upload, like and comment on eachot
 ## Setup
 1. Clone the project
 ```
-git clone <link>
+git clone https://github.com/erhuz/Photoify.git
 ```
 2. Rename `.env.example` to `.env` inside the Photoify folder
-3. Generate
+3. Generate application key: Run `php artisan key:generate` inside the Photoify folder
 
 
 ## License
