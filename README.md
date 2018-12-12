@@ -8,7 +8,7 @@ An Instagram-like application where users can upload, like and comment on eachot
 
 ## Setup
 1. Clone the project
-```
+```bash
 git clone https://github.com/erhuz/Photoify.git
 ```
 2. Rename `.env.example` to `.env` inside the Photoify folder
