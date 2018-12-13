@@ -30,4 +30,4 @@ $ php artisan serve
 
 
 ## License
-[The MIT License](https://opensource.org/licenses/MIT)
+[The MIT License](https://github.com/erhuz/Photoify/blob/master/LICENSE)
