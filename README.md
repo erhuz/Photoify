@@ -6,6 +6,10 @@ An Instagram-like application where users can upload, like and comment on eachot
 ## Built with
 * Laravel
 
+## Dependencies
+* php-sqlite3
+* doctrine/dbal
+
 ## Setup
 1. Clone the project
 ```
@@ -15,15 +19,19 @@ $ git clone https://github.com/erhuz/Photoify.git
 ```
 $ cd Photoify
 ```
-3. While inside the Photoify directory: Rename `.env.example` to `.env`
+3. Install composer dependencies
+```
+$ composer install
+```
+4. Rename `.env.example` to `.env`
 ```
 $ mv .env.example .env
 ```
-4. Generate application key
+5. Generate application key
 ```
 $ php artisan key:generate
 ```
-5. Start the application server
+6. Start the application server
 ```
 $ php artisan serve
 ```
