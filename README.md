@@ -23,7 +23,7 @@ $ mv .env.example .env
 ```
 $ php artisan key:generate
 ```
-6. Start the application server
+5. Start the application server
 ```
 $ php artisan serve
 ```
