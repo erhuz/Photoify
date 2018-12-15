@@ -1,0 +1,108 @@
+.landing-page{
+    .header{
+        min-height     : 100vh;
+        padding        : 16px 0px 32px 0px;
+        background     : $iconic-gradient-background;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+
+        .btn-container{
+            padding  : 24px;
+            cursor   : pointer;
+            transform: translateY(20vh);
+
+            .scroll-down-btn{   // ALIGN ME AT THE BOTTOM FFS
+                display                  : flex;
+                justify-content          : center;
+                justify-self             : flex-start;
+                width                    : 8px;
+                height                   : 8px;
+                animation                : scrollDownBtnBounce 2000ms ease-in-out;
+                animation-iteration-count: infinite;
+
+                transform: translateY(-10px);
+                i{
+                    border      : solid #eee;
+                    border-width: 0 3px 3px 0;
+                    display     : inline-block;
+                    padding     : 8px;
+                }
+
+                .down{
+                    transform        : rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+
+            @keyframes scrollDownBtnBounce {
+                0% {transform: translateY(-10px)}
+                20% {transform: translateY(calc(10px - 12px))}
+                40% {transform: translateY(-10px)}
+            }
+        }
+    }
+
+    .content {
+        text-align: center;
+    }
+    div.title {
+        color    : #eee;
+        font-size: 74px;
+        margin   : 0px;
+    }
+    .under-title{
+        max-width: 786px;
+        margin   : 0 auto 30px auto;
+        padding  : 0px 16px 16px 16px;
+        p{
+            color      : #eee;
+            font-weight: 600;
+        }
+    }
+
+    @media screen and (min-width: 600px){
+        // .header{
+        //     min-height: 50vh;
+        // }
+        div.title {
+            font-size: 164px;
+        }
+        .under-title{
+            p{
+                font-size  : 32px;
+                font-weight: 200;
+            }
+        }
+    }
+
+    .links a {
+        box-shadow      : 0 2px 4px 2px rgba(0, 0, 0, 0.1);
+        display         : inline-block;
+        color           : #636b6f;
+        background-color: #eee;
+        border          : 1px solid #919699;
+        border-radius   : 5px;
+        margin          : 0 12px;
+        padding         : 8px 25px;
+        font-size       : 13px;
+        font-weight     : 600;
+        letter-spacing  : .1rem;
+        text-decoration : none;
+        text-transform  : uppercase;
+        transition      : transform .1s, box-shadow .1s;
+
+        &:hover{
+            box-shadow       : 0 2px 6px 4px rgba(0, 0, 0, 0.2);
+            -webkit-transform: scale(1.08);
+            -moz-transform   : scale(1.08);
+            -o-transform     : scale(1.08);
+            transform        : scale(1.08);
+        }
+    }
+    .m-b-md {
+        margin-bottom: 30px;
+    }
+
+}
