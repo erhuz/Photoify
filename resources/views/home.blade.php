@@ -15,6 +15,10 @@
                     @endif
 
                     You are logged in!
+
+                    @php
+                        dd(Auth::user());
+                    @endphp
                 </div>
             </div>
         </div>
