@@ -10620,6 +10620,11 @@ a.text-dark:focus {
   margin-bottom: 30px;
 }
 
+a.profile-card {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .profile-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10648,8 +10653,8 @@ a.text-dark:focus {
 
 @media screen and (min-width: 768px) {
   .profile-card .profile_img {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 160px;
+    max-width: 160px;
     margin: 0 auto;
   }
 }
@@ -10664,7 +10669,7 @@ a.text-dark:focus {
 }
 
 .profile_info h3 {
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
 }
 

@@ -3,6 +3,10 @@
     // Because card height might differ
 }
 
+a.profile-card{
+    text-decoration: none;
+    color          : rgba(0, 0, 0, 0.7);
+}
 .profile-card{
     display       : flex;
     flex-direction: column;
@@ -20,8 +24,8 @@
         overflow: hidden;
 
         @media screen and (min-width: 768px) {
-            max-height: 200px;
-            max-width : 200px;
+            max-height: 160px;
+            max-width : 160px;
             margin    : 0 auto;
         }
 
@@ -36,7 +40,7 @@
         margin: 12px 0 24px 0;
 
     h3{
-        font-size : 20px;
+        font-size : 16px;
         text-align: center;
     }
 }
