@@ -37,4 +37,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Posts routes (user posts)
 Route::get('posts', 'PostsController@index')->name('my posts');
 Route::get('posts/new', 'PostsController@showNewPostForm')->name('new post');
-Route::post('posts/new', 'PostsController@create');
+Route::post('posts/new', 'PostsController@newPost');

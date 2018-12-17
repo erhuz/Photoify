@@ -31,9 +31,9 @@ class PostsController extends Controller
         return view('posts.new');
     }
 
-    public function create(array $data)
+    public function newPost(Request $request)
     {
-        dd($data);
+        dd($request);
     }
 }
 
