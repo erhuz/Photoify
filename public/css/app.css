@@ -10620,6 +10620,43 @@ a.text-dark:focus {
   margin-bottom: 30px;
 }
 
+.profile-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-card .profile_img {
+  margin: 0 10vw;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-card .profile_img {
+    max-height: 200px;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+.profile-card .profile_img img {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.profile_info {
+  margin: 6px 0 40px 0;
+}
+
+.profile_info h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
 .iconic-gradient-background {
   background: linear-gradient(135deg, #1c5d8e 0%, #863589 50%, #d63b5d 100%);
 }
