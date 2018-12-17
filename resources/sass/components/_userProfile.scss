@@ -1,0 +1,34 @@
+.profile-card-container{
+    // Any good way to display as column?
+    // Because card height might differ
+}
+
+.profile-card{
+    display       : flex;
+    flex-direction: column;
+
+
+    .profile_img{
+        margin  : 0 10vw;
+        overflow: hidden;
+
+        @media screen and (min-width: 768px) {
+            max-height: 200px;
+            max-width : 200px;
+            margin    : 0 auto;
+        }
+
+        img{
+            width : 90%;
+            margin: 0 5%;
+        }
+    }
+}
+
+.profile_info{
+        margin: 6px 0 40px 0;
+    h3{
+        font-size : 20px;
+        text-align: center;
+    }
+}
