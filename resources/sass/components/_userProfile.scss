@@ -6,6 +6,13 @@
 .profile-card{
     display       : flex;
     flex-direction: column;
+    cursor        : pointer;
+    margin        : 0 0px 24px 0px;
+    transition    : transform .3s, font-size .3s;
+
+    &:hover{
+        transform: scale(1.1);
+    }
 
 
     .profile_img{
@@ -26,7 +33,8 @@
 }
 
 .profile_info{
-        margin: 6px 0 40px 0;
+        margin: 12px 0 24px 0;
+
     h3{
         font-size : 20px;
         text-align: center;

@@ -10628,6 +10628,17 @@ a.text-dark:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
+  margin: 0 0px 24px 0px;
+  -webkit-transition: font-size .3s, -webkit-transform .3s;
+  transition: font-size .3s, -webkit-transform .3s;
+  transition: transform .3s, font-size .3s;
+  transition: transform .3s, font-size .3s, -webkit-transform .3s;
+}
+
+.profile-card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .profile-card .profile_img {
@@ -10649,7 +10660,7 @@ a.text-dark:focus {
 }
 
 .profile_info {
-  margin: 6px 0 40px 0;
+  margin: 12px 0 24px 0;
 }
 
 .profile_info h3 {
