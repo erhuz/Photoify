@@ -17,21 +17,11 @@ class UserController extends Controller
     }
 
     /**
-     * Show the logged in user profile
+     * Show the current users profile
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('user.profile');
-    }
-
-    /**
-     * Show the logged in user profile
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function profile()
     {
         return view('user.profile');
     }
