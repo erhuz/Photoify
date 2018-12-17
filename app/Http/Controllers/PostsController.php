@@ -17,20 +17,31 @@ class PostsController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show a placeholder view
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('home');
+        return view('placeholder');
     }
 
+    /**
+     * Show the post upload form.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function showNewPostForm()
     {
         return view('posts.new');
     }
 
+    /**
+     * Handle a post upload for the application
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
     public function newPost(Request $request)
     {
         dd($request);
