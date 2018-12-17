@@ -32,7 +32,7 @@
 
                             <div class="under-title">
                                 <p>
-                                    A social media for aesthetic photographers of all shapes and forms.
+                                    A social media for aesthetic photographers of all shapes and sizes.
                                 </p>
                             </div>
 
