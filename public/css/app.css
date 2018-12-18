@@ -10681,25 +10681,30 @@ a.profile-card {
   display: none;
 }
 
-.user-profile .profile-img {
-  overflow: hidden;
-  border-radius: 5px;
-  width: 100%;
-  max-width: 510px;
-  cursor: pointer;
-}
-
 .user-profile .profile-img-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+}
+
+.user-profile .profile-img-container .inner-profile-img-container {
+  border-radius: 5px;
+  background-color: #0000001a;
+  width: 100%;
+  padding-top: 100%;
+  max-height: 500px !important;
+  /* 1:1 Aspect Ratio */
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  /* If you want text inside of it */
 }
 
 .user-profile .profile-img-container .img-change {
@@ -10712,14 +10717,19 @@ a.profile-card {
 }
 
 .user-profile .description {
-  margin-left: 8px;
+  margin: 0;
+}
+
+.user-profile .manage-posts {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 @media screen and (min-width: 992px) {
   .user-profile .description {
     padding-top: 16px;
     padding-bottom: 8px;
-    margin: 0;
   }
 
   .user-profile .middle {
@@ -10727,10 +10737,14 @@ a.profile-card {
   }
 
   .user-profile .profile-img-container {
+    margin-top: 47px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -10738,17 +10752,6 @@ a.profile-card {
 
   .user-profile .profile-img-container > div {
     cursor: pointer;
-  }
-
-  .user-profile .profile-img-container .profile-img {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    -webkit-transition: .5s ease;
-    transition: .5s ease;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
   }
 
   .user-profile .profile-img-container .middle {
