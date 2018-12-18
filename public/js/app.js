@@ -13770,6 +13770,8 @@ __webpack_require__(12);
 //     el: '#app'
 // });
 
+__webpack_require__(41);
+
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -36007,6 +36009,41 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */
+/***/ (function(module, exports) {
+
+var clickableText = document.querySelector('.user-profile .img-change');
+var profileImgContainerDiv = document.querySelector('.user-profile .profile-img-container > div');
+var profileImgForm = document.querySelector('.user-profile .profile-img-form');
+var profileImgInput = document.querySelector('.user-profile #image');
+var profileImg = document.querySelector('.profile-img-container img');
+
+(function () {
+  clickableText.addEventListener("click", function () {
+    return openProfileImgForm();
+  });
+  profileImgContainerDiv.addEventListener("click", function () {
+    return openProfileImgForm();
+  });
+
+  function openProfileImgForm() {
+    profileImgInput.click();
+  };
+
+  profileImgForm.addEventListener("change", function () {
+    if (profileImgInput.files && profileImgInput.files[0]) {
+      profileImg.setAttribute('src', window.URL.createObjectURL(profileImgInput.files[0]));
+    }
+    console.log(profileImgInput.files[0]);
+    console.log('Send request to api');
+  });
+})();
 
 /***/ })
 /******/ ]);
