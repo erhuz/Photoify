@@ -8,18 +8,21 @@
         display: none;
     }
 
-    .profile-img{
-        overflow     : hidden;
-        border-radius: 5px;
-        width        : 100%;
-        max-width    : 510px;
-        cursor       : pointer;
-    }
-
     .profile-img-container{
         display       : flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         order         : -1;
+
+        .inner-profile-img-container{
+            border-radius      : 5px;
+            background-color   : #0000001a;
+            width              : 100%;
+            padding-top        : 100%;
+            max-height         : 500px !important;     /* 1:1 Aspect Ratio */
+            position           : relative;
+            background-position: center             ;
+            background-size    : cover;                /* If you want text inside of it */
+        }
 
         .img-change{
             font-weight: bold;
@@ -32,7 +35,10 @@
     }
 
     .description{
-        margin-left: 8px;
+        margin: 0;
+    }
+    .manage-posts{
+        order: 1;
     }
 
     @media screen and (min-width: 992px) {
@@ -40,7 +46,6 @@
         .description{
             padding-top   : 16px;
             padding-bottom: 8px;
-            margin        : 0;
         }
 
         .middle{
@@ -48,20 +53,13 @@
         }
 
         .profile-img-container{
-            flex-direction: column;
-            order         : 0;
+            margin-top     : 47px;
+            justify-content: flex-end;
+            flex-direction : column-reverse;
+            order          : 0;
 
             > div{
                 cursor: pointer;
-            }
-
-            .profile-img {
-                opacity            : 1;
-                display            : block;
-                width              : 100%;
-                height             : auto;
-                transition         : .5s ease;
-                backface-visibility: hidden;
             }
 
             .middle {
