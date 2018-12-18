@@ -38,12 +38,11 @@ Auth::routes(); // This bit of code corresponds with all commented routes above
 Route::get('/home', 'HomeController@index')->name('home');
 
 // User routes
-Route::get('user', 'UserController@profile');
-Route::get('user/profile', 'UserController@profile')->name('profile');
+Route::get('profile', 'UserController@profile')->name('profile');
 
 // Users routes
 Route::get('users', 'UsersController@index')->name('users');
-Route::get('users/{id}', 'UsertsController@getUser')->name('get user');
+Route::get('user/{id}', 'UsertsController@getUser')->name('get user');
 
 // Posts routes (user posts)
 Route::get('posts', 'PostsController@index')->name('my posts');
