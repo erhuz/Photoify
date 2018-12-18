@@ -12,7 +12,8 @@
 @import 'landing';  // Specific landing page styles
 
 // Custom SCSS components
-@import 'components/userProfile';
+@import 'components/profile-card';
+@import 'components/user-profile';
 
 // Custom SCSS classes
 @import 'classes/backgrounds';
