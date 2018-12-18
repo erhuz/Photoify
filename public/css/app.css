@@ -10787,6 +10787,49 @@ a.profile-card {
   }
 }
 
+.post-card-container .post {
+  margin: 64px 0 0 0;
+}
+
+.post-card-container .post a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.post-card-container .post .card .card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-card-container .post .card .card-header .profile-picture-container {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: linear-gradient(135deg, #1c5d8e 0%, #863589 50%, #d63b5d 100%);
+}
+
+.post-card-container .post .card .card-header .profile-picture-container img {
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+}
+
+.post-card-container .post .card .card-header h5 {
+  margin: 0 0 0 8px;
+}
+
+.post-card-container .post img {
+  width: 100%;
+}
+
 .iconic-gradient-background {
   background: linear-gradient(135deg, #1c5d8e 0%, #863589 50%, #d63b5d 100%);
 }

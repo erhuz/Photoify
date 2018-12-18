@@ -1,0 +1,40 @@
+.post-card-container{
+
+    .post{
+        margin: 64px 0 0 0;
+
+        a{
+            text-decoration: none;
+            color          : rgba(0, 0, 0, 0.7);
+        }
+
+        .card{
+            .card-header{
+                display       : flex;
+                flex-direction: row;
+                align-items   : center;
+
+                .profile-picture-container{
+                    border-radius: 50%;
+                    height       : 40px;
+                    width        : 40px;
+                    background   : $iconic-gradient-background;
+
+                    img{
+                        width : 90%;
+                        height: 90%;
+                        margin: 5%;
+                    }
+                }
+
+                h5{
+                    margin: 0 0 0 8px;
+                }
+            }
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+}
