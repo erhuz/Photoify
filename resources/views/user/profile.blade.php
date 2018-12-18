@@ -11,21 +11,21 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-lg-8">
-                    <form action="#" method="post">
+                <form action="#{{-- Api? --}}" method="post">
                         <label class="mt-3" for="name">Username</label>
-                        <input class="form-control ds-input" type="text" value="{{__('Current username')}}">
+                        <input class="form-control ds-input" type="text" value="{{ Auth::user()->name }}">
 
                         <label class="mt-3" for="email">E-mail</label>
-                        <input class="form-control ds-input" type="email" value="{{__('Current Email')}}">
+                        <input class="form-control ds-input" type="email" value="{{ Auth::user()->email }}">
 
                         <label class="mt-3" for="bio">Biography</label>
-                        <textarea class="form-control ds-input" name="bio" id="bio" cols="30" rows="7" placeholder="Tell people who you are!">{{__('Current biography')}}</textarea>
+                        <textarea class="form-control ds-input" name="bio" id="bio" cols="30" rows="7" placeholder="Tell people who you are!">{{ Auth::user()->bio }}</textarea>
 
                         <input class="btn btn-primary mt-3" type="submit" value="Save">
                     </form>
                 </div>
 
-                <form action="#" method="post" class="profile-img-form">
+                <form action="#{{-- Api? --}}" method="post" class="profile-img-form">
                     <input type="file" name="image" id="image">
                 </form>
                 <div class="col-md-12 col-lg-4 profile-img-container">
