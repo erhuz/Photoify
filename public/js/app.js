@@ -13729,7 +13729,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(36);
+module.exports = __webpack_require__(37);
 
 
 /***/ }),
@@ -13770,7 +13770,7 @@ __webpack_require__(12);
 //     el: '#app'
 // });
 
-__webpack_require__(41);
+__webpack_require__(36);
 
 /***/ }),
 /* 12 */
@@ -36008,16 +36008,6 @@ module.exports = function spread(callback) {
 /* 36 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */
-/***/ (function(module, exports) {
-
 (function () {
   if (document.querySelector('.user-profile')) {
     var openProfileImgForm = function openProfileImgForm() {
@@ -36025,7 +36015,7 @@ module.exports = function spread(callback) {
     };
 
     var clickableText = document.querySelector('.user-profile .img-change');
-    var profileImgContainerDiv = document.querySelector('.user-profile .profile-img-container > div');
+    var innerProfileImgContainer = document.querySelector('.user-profile .profile-img-container .inner-profile-img-container');
     var profileImgForm = document.querySelector('.user-profile .profile-img-form');
     var profileImgInput = document.querySelector('.user-profile #image');
     var profileImg = document.querySelector('.profile-img-container img');
@@ -36033,7 +36023,7 @@ module.exports = function spread(callback) {
     clickableText.addEventListener("click", function () {
       return openProfileImgForm();
     });
-    profileImgContainerDiv.addEventListener("click", function () {
+    innerProfileImgContainer.addEventListener("click", function () {
       return openProfileImgForm();
     });
 
@@ -36041,7 +36031,7 @@ module.exports = function spread(callback) {
 
     profileImgForm.addEventListener("change", function () {
       if (profileImgInput.files && profileImgInput.files[0]) {
-        profileImg.setAttribute('src', window.URL.createObjectURL(profileImgInput.files[0]));
+        innerProfileImgContainer.setAttribute('style', 'background-image: url(\'' + window.URL.createObjectURL(profileImgInput.files[0]) + '\');');
       }
       console.log(profileImgInput.files[0]);
       console.log('Send request to api');
@@ -36050,6 +36040,12 @@ module.exports = function spread(callback) {
     console.log('Not user profile page.');
   }
 })();
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
