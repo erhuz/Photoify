@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
 |--------------------------------------------------------------------------
@@ -39,10 +41,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // User routes
 Route::get('profile', 'UserController@profile')->name('profile');
+Route::post('avatar', 'UserController@setAvatar');
 
 // Users routes
 Route::get('users', 'UsersController@index')->name('users');
-Route::get('user/{id}', 'UsertsController@getUser');
+Route::get('user/{id}', 'UsersController@getUser');
 
 // Posts routes (user posts)
 Route::get('posts', 'PostsController@index')->name('my posts');
