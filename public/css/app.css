@@ -10887,6 +10887,10 @@ body {
   margin: 0;
 }
 
+main {
+  margin-top: 64px;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
