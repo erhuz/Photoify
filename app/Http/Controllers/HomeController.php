@@ -1,8 +1,9 @@
-<?php declare(strict_types=1);
+<?php
+
+declare (strict_types = 1);
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Post;
 
 class HomeController extends Controller
