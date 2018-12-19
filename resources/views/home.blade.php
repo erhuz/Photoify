@@ -10,7 +10,13 @@
                 <a href="{{ route('profile') }}">
                     <div class="card-header">
                         <div class="profile-picture-container">
-                            <img class="profile-picture rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="{{ Auth::user()->name }}">
+                            <img class="profile-picture rounded-circle" src="
+                            @if (Auth::User()->avatar === null)
+                            https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png
+                            @else
+                            {{ Storage::url(Auth::User()->avatar) }}
+                            @endif
+                            " alt="{{ Auth::user()->name }}">
                         </div>
                         <h5>{{ Auth::user()->name }}</h5>
                     </div>
@@ -40,7 +46,7 @@
                         </div>
 
                         <a class="card-image" href="#{{__('Post page')}}">
-                        <img class="" src="{{$post->img}}"
+                            <img class="" src="{{$post->img}}"
                             alt="Card image cap">
                         </a>
 
