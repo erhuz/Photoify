@@ -42,9 +42,9 @@ Route::get('profile', 'UserController@profile')->name('profile');
 
 // Users routes
 Route::get('users', 'UsersController@index')->name('users');
-Route::get('user/{id}', 'UsertsController@getUser')->name('get user');
+Route::get('user/{id}', 'UsertsController@getUser');
 
 // Posts routes (user posts)
 Route::get('posts', 'PostsController@index')->name('my posts');
-Route::get('posts/new', 'PostsController@showNewPostForm')->name('new post');
-Route::post('posts/new', 'PostsController@newPost');
+Route::get('posts/new', 'PostsController@showCreateForm')->name('new post');
+Route::post('posts/new', 'PostsController@create');
