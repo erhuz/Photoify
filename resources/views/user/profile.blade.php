@@ -11,7 +11,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-lg-8">
-                <form action="#{{-- Api? --}}" method="post">
+                    <form action="#{{-- Api? --}}" method="post">
                         <label class="mt-3" for="name">Username</label>
                         <input class="form-control ds-input" type="text" value="{{ Auth::user()->name }}">
 
@@ -26,8 +26,9 @@
                 </div>
 
                 <form action="#{{-- Api? --}}" method="post" class="profile-img-form">
-                    <input type="file" name="image" id="image">
+                    <input type="file" name="image" id="image" accept="image/x-png,image/gif,image/jpeg">
                 </form>
+
                 <div class="col-md-12 col-lg-4 profile-img-container">
                     <p class="description">Image updates as soon as you choose an image. <span class="img-change">Click it to change!</span></p>
                     <div class="inner-profile-img-container" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png')">
@@ -37,6 +38,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -50,8 +52,9 @@
             </div>
             <div class="row mt-4">
                 <div class="col">
-                    <a href="" class="btn btn-primary btn-lg btn-block">Manage my posts</a>
-                    <a href="" class="btn btn-danger btn-lg btn-block">Delete account</a>
+                    <a href="{{ route('new post') }}" class="btn btn-primary btn-block">{{__('Create new post')}}</a>
+                    <a href="{{ route('my posts') }}" class="btn btn-primary btn-block">{{__('Manage my posts')}}</a>
+                    <a href="{{-- link / action --}}" class="btn btn-danger btn-block">{{__('Delete account')}}</a>
                 </div>
             </div>
         </div>
