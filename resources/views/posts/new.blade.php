@@ -8,10 +8,8 @@
                 <div class="card-header">New post</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('new post') }}">
+                    <form method="POST" action="{{ route('new post') }}" enctype="mulitypart/form-data">
                         @csrf
-
-
 
                         <div class="form-group row">
                             <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>

@@ -12,6 +12,8 @@
             <div class="row">
                 <div class="col-md-12 col-lg-8">
                     <form action="#{{-- Api? --}}" method="post">
+                        @csrf
+
                         <label class="mt-3" for="name">Username</label>
                         <input class="form-control ds-input" type="text" value="{{ Auth::user()->name }}">
 
@@ -25,7 +27,8 @@
                     </form>
                 </div>
 
-                <form action="#{{-- Api? --}}" method="post" class="profile-img-form">
+                <form action="#{{-- Api? --}}" method="post" enctype="mulitypart/form-data" class="profile-img-form">
+                    @csrf
                     <input type="file" name="image" id="image" accept="image/x-png,image/gif,image/jpeg">
                 </form>
 
@@ -68,6 +71,8 @@
             <div class="row">
                 <div class="col">
                     <form action="#" method="post">
+                        @csrf
+
                         <label class="mt-3" for="password">Password</label>
                         <input class="form-control ds-input" type="password" name="password" id="password">
 
