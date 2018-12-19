@@ -36030,14 +36030,8 @@ module.exports = function spread(callback) {
     ;
 
     profileImgForm.addEventListener("change", function () {
-      if (profileImgInput.files && profileImgInput.files[0]) {
-        innerProfileImgContainer.setAttribute('style', 'background-image: url(\'' + window.URL.createObjectURL(profileImgInput.files[0]) + '\');');
-      }
-      console.log(profileImgInput.files[0]);
-      console.log('Send request to api');
+      profileImgForm.submit();
     });
-  } else {
-    console.log('Not user profile page.');
   }
 })();
 
