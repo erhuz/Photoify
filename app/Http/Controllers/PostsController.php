@@ -31,7 +31,7 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function showNewPostForm()
+    public function showCreateForm()
     {
         return view('posts.new');
     }
@@ -42,9 +42,8 @@ class PostsController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function newPost(Request $request)
+    public function create(Request $request)
     {
         dd($request);
     }
 }
-

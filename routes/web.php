@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 /*
 |--------------------------------------------------------------------------
@@ -9,15 +9,15 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
-    if(!Auth::check()) {
+    if (!Auth::check()) {
         return view('welcome');
     }
+
     return Redirect::route('home');
 })->name('welcome');
-
 
 // Authentication Routes...
 // $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
