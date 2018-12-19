@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <main>
+        <main class="landing-page">
             <div class="landing-page">
                 <div class="header">
                     <div class="content-container">
