@@ -26,7 +26,8 @@
         </div>
 
         <div class="col-md-10 col-lg-6">
-            @for ($i = 1; $i < 20; $i++)
+            @foreach ($posts as $post)
+
             <div class="row post">
                 <div class="col">
                     <div class="card">
@@ -39,22 +40,23 @@
                         </div>
 
                         <a class="card-image" href="#{{__('Post page')}}">
-                            <img class="" src="https://via.placeholder.com/{{mt_rand(5,20) * 100}}x{{mt_rand(5,20) * 100}}"
+                        <img class="" src="{{$post->img}}"
                             alt="Card image cap">
                         </a>
 
                         <div class="card-body">
                             <div class="card-text">
                                 <p>Some quick example text to build on the card title and make up the bulk of the
-                                    card's content.</p>
-                                </div>
+                                    card's content.
+                                </p>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                @endfor
             </div>
+            @endforeach
         </div>
     </div>
-    @endsection
+</div>
+@endsection
