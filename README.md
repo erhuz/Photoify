@@ -1,4 +1,4 @@
-# Photoify
+# Photoify [UNFINISHED]
 
 ## Hand-in project @ Yrgo Göteborg
 An Instagram-like application where users can upload, like and comment on eachothers images.
