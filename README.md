@@ -1,4 +1,5 @@
 # Photoify [UNFINISHED]
+For the finished version, check out [Photoify2](https://github.com/erhuz/Photoify2)
 
 ## Hand-in project @ Yrgo Göteborg
 An Instagram-like application where users can upload, like and comment on eachothers images.
